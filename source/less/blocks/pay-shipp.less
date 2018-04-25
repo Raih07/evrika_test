@@ -1,0 +1,91 @@
+.pay-shipp {
+  margin-bottom: 52px;
+}
+
+.pay-shipp__inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pay-shipp__pay {
+  width: 610px;
+}
+
+.pay-shipp__shipp {
+  width: 295px;
+}
+
+.pay-shipp__list {
+  .list-reset();
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pay-shipp__item {
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-start;
+  width: 290px;
+  min-height: 116px;
+  margin-right: 25px;
+  margin-bottom: 24px;
+
+  &:nth-child(2n) {
+    margin-right: 0;
+  }
+}
+
+.pay-shipp__shipp .pay-shipp__item {
+  margin-right: 0;
+}
+
+.pay-shipp__icon {
+  display: inline-block;
+  margin-right: 37px;
+  width: 116px;
+  height: 116px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background-color: @show-ball;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &--wallet {
+    background-image: url("../img/wallet-icon.png");
+    background-size: 68px 59px;
+  }
+
+  &--blank {
+    background-image: url("../img/blank-icon.png");
+    background-size: 63px 75px;
+  }
+
+  &--plastic {
+    background-image: url("../img/plastic-card-icon.png");
+    background-size: 69px 62px;
+  }
+
+  &--online {
+    background-image: url("../img/by-online-icon.png");
+    background-size: 61px 61px;
+  }
+
+  &--pickup {
+    background-image: url("../img/pickup-icon.png");
+    background-size: 67px 67px;
+  }
+
+  &--delivery {
+    background-image: url("../img/delivery-icon.png");
+    background-size: 89px 42px;
+  }
+}
+
+.pay-shipp__text {
+  margin: 0;
+  padding-top: 20px;
+  font-family: "SegoeUIBold", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: @violet;
+}

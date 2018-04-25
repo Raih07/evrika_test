@@ -1,0 +1,197 @@
+.main-header {
+  color: @violet-fonts;
+  background-color: @white;
+}
+
+.main-header__top {
+  border-bottom: 1px solid #e2e2ed;
+}
+
+.main-header__wrapper {
+  .set-container();
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-header__site-nav {
+  max-width: 925px;
+}
+
+.main-header__site-list {
+  .list-reset();
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main-header__site-item {
+  margin-right: 56px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.main-header__site-link {
+  display: block;
+  padding-top: 5px;
+  padding-bottom: 8px;
+  font-size: 11px;
+  line-height: 21px;
+  letter-spacing: 1.7px;
+  word-spacing: 1.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  &:hover {
+    color: @pink;
+  }
+}
+
+.main-header__add-bookmarks {
+  position: relative;
+  right: -13px;
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 5px;
+  padding-bottom: 8px;
+  padding-left: 30px;
+  max-width: 295px;
+  font-size: 11px;
+  line-height: 21px;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+
+  &:hover {
+    color: @pink;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 2px;
+    width: 12px;
+    height: 12px;
+    background: url("../img/star-icon.png") no-repeat center top;
+    background-size: 12px 11px;
+    transform: translateY(-50%);
+  }
+}
+
+.main-header__middle {
+  .set-container();
+  padding-top: 18px;
+  padding-bottom: 28px;
+  display: flex;
+
+  background-color: azure;
+}
+
+.main-header__logo {
+  display: block;
+  width: 210px;
+  margin-right: 68px;
+
+  outline: 1px solid red;
+}
+
+.main-header__img {
+  display: block;
+  width: 155px;
+  height: auto;
+  margin-bottom: 5px;
+}
+
+.main-header__logo-slogan {
+  margin: 0;
+  font-family: "SegoeUIBold", "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+
+.main-header__contacts {
+  display: flex;
+  width: 728px;
+  padding-top: 5px;
+  justify-content: space-between;
+  outline: 1px solid blue;
+}
+
+.main-header__contacts-item {
+  position: relative;
+  box-sizing: border-box;
+  padding-left: 40px; //38
+  width: 338px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 6px;  //10
+    left: 0;
+    width: 20px;
+    height: 20px;
+  }
+
+  &--phone::after {
+    background-image: url("../img/phone-icon.png");
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+  }
+
+  &--card::after {
+    top: 4px;
+    left: 0;
+    background-image: url("../img/mark-icon.png");
+    background-repeat: no-repeat;
+    background-size: 12px 20px;
+  }
+
+  outline: 1px solid green;
+}
+
+.main-header__contacts-text {
+  margin: 0;
+  margin-bottom: 8px;
+  font-size: 16px;
+  line-height: 21px;
+  word-spacing: 0.7px;
+  color: @black-fonts;
+}
+
+.main-header__contacts-tel {
+  font-family: "SegoeUIBold", "Arial", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  text-decoration: none;
+  word-spacing: normal;
+  color: @black-fonts;
+}
+
+.main-header__link {
+  font-size: 16px;
+  line-height: 21px;
+  letter-spacing: 0.2px;
+  color: @violet;
+  text-decoration: none;
+  background: linear-gradient(to bottom, transparent 0%, transparent 95%, #8f8bba 95%, #8f8bba 100%, transparent 100%);
+  outline: none;
+  transition: all 0.2s ease;
+
+  &:hover,
+  &:focus {
+    color: @pink;
+    background: linear-gradient(to bottom, transparent 0%, transparent 95%, @pink 95%, @pink 100%, transparent 100%);
+  }
+}
+
+.main-header__order {
+  padding-top: 4px;
+  width: 208px;
+  margin-left: auto;
+}
+
+.main-header__order-link {
+  width: 100%;
+  margin-bottom: 12px;
+}

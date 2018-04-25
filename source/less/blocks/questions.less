@@ -1,0 +1,126 @@
+.questions {
+  margin-bottom: 86px;
+}
+
+.questions__box {
+  position: relative;
+  padding: 31px 36px 38px;
+  margin-bottom: 31px;
+  background-color: @snow;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 99px;
+    height: 154px;
+    top: 22px;
+    left: -220px;
+    background-image: url("../img/question-icon.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 99px 154px;
+  }
+}
+
+.questions__tittle {
+  margin-bottom: 26px;
+}
+
+.questions__box-tittle {
+  margin: 0;
+  margin-bottom: 33px;
+  font-family: "SegoeUIBold", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.6px;
+  color: @violet;
+}
+
+.questions__hidden-btn {
+  position: absolute;
+  top: 24px;
+  right: 47px;
+  padding-right: 22px;
+  font-size: 14px;
+  line-height: 21px;
+  color: @violet;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    width: 10px;
+    height: 6px;
+    transform: translateY(-50%);
+    background-image: url("../img/close-icon.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 10px 6px;
+  }
+}
+
+.questions__list {
+  .list-reset();
+  counter-reset: count;
+}
+
+.questions__item {
+  position: relative;
+  padding-left: 62px;
+  margin-bottom: 21px;
+  font-size: 16px;
+  line-height: 21px;
+  color: @middle-black;
+  counter-increment: count;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::after {
+    content: counter(count) ".";
+    position: absolute;
+    left: 0;
+    top: 1px;
+    width: 32px;
+    height: 32px;
+    font-family: "SegoeUIBold", "Arial", sans-serif;
+    font-size: 14px;
+    line-height: 31px;
+    //text-indent: 2px;
+    text-align: center;
+    vertical-align: bottom;
+    color: @violet;
+    border-radius: 50%;
+    background-color: @white;
+  }
+}
+
+.questions__list-link {
+  .list-reset();
+}
+
+.questions__list-item {
+  margin-bottom: 22px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.questions__link {
+  font-size: 18px;
+  line-height: 24px;
+  text-decoration: none;
+  color: @violet;
+  background: linear-gradient(to bottom, transparent 0%, transparent 93%, @violet 93%, @violet 100%, transparent 100%);
+  outline: none;
+
+  &:hover,
+  &:focus {
+    color: @pink;
+    background: linear-gradient(to bottom, transparent 0%, transparent 93%, @pink 93%, @pink 100%, transparent 100%);
+  }
+}

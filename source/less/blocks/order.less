@@ -1,0 +1,144 @@
+.order {
+  margin-bottom: 132px;
+}
+
+.order__box {
+  position: relative;
+  box-sizing: border-box;
+  padding-left: 96px;
+  padding-right: 98px;
+  padding-bottom: 52px;
+  width: 100%;
+  border: 8px solid @violet;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 45px;
+    top: 50px;
+    width: 100%;
+    height: 100%;
+    background-color: @light-blue;
+    z-index: -1;
+  }
+}
+
+.order__tittle {
+  position: relative;
+  left: 50%;
+  top: -12px;
+  display: inline-block;
+  padding: 0 94px;
+  margin: 0;
+  margin-bottom: 58px;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 24px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: @violet-dark;
+  background-color: #ffffff;
+  transform: translateX(-50%);
+}
+
+.order__container-input {
+  display: flex;
+  justify-content: space-between;
+
+  .order__group {
+    width: 350px;
+  }
+}
+
+.order__group {
+  position: relative;
+  margin-bottom: 42px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &--valid::after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    right: -3px;
+    width: 16px;
+    height: 13px;
+    background-image: url("../img/form-check-icon.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 16px 13px;
+  }
+}
+
+.order__input,
+.order__area-input {
+  box-sizing: border-box;
+  width: 100%;
+  padding-bottom: 24px;
+  padding-right: 35px;
+  font: inherit;
+  font-size: 24px;
+  line-height: 30px;
+  color: @violet;
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid @violet;
+  appearance: none;
+  outline: none;
+  opacity: 0.5;
+  transition: opacity 0.05s ease;
+
+  &::placeholder {
+    color: @violet;
+  }
+
+  &:focus,
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.order__area-input {
+  min-height: 119px;
+  resize: none;
+}
+
+.order__add-file {
+  position: relative;
+  margin: 0;
+  margin-top: 30px;
+  padding-left: 41px;
+  font-size: 14px;
+  line-height: 20px;
+  color: @violet;
+  cursor: pointer;
+
+  &:hover {
+    color: @pink;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 1px;
+    width: 20px;
+    height: 20px;
+    background-image: url("../img/add-file-icon.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px 20px;
+  }
+}
+
+.order__btn {
+  display: block;
+  margin: 0 auto;
+  margin-top: 25px;
+  padding-top: 14px;
+  padding-bottom: 13px;
+  width: 295px;
+  letter-spacing: 1px;
+  text-align: center;
+}

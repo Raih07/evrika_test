@@ -1,0 +1,99 @@
+.contacts {
+  margin-bottom: 75px;
+}
+
+.contacts__tittle {
+  margin-bottom: 41px;
+}
+
+.contacts__list {
+  display: flex;
+  //flex-wrap: wrap;
+  border: 3px solid #e6f0f8;
+}
+
+.contacts__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 37px 30px 48px;
+  width: 306px;
+  min-height: 354px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.1s ease;
+
+  &:hover,
+  &:focus {
+    outline: 3px solid @pink;
+    box-shadow: 0 35px 50px 6px rgba(250, 212, 227, 0.8);
+  }
+}
+
+.contacts__item-tittle {
+  margin: 0;
+  margin-bottom: 1px;
+  font-size: 24px;
+  line-height: 29px;
+  color: #3b3b3b;
+}
+
+.contacts__item-subtittle {
+  margin: 0;
+  margin-bottom: 33px;
+  font-family: "SegoeUIBold", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  color: @violet;
+}
+
+.contacts__link {
+  display: inline-block;
+  margin: 0;
+  font-family: "SegoeUIBold", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  color: @violet;
+  background: linear-gradient(to bottom, transparent 0%, transparent 93%, @violet 93%, @violet 100%, transparent 100%);
+}
+
+.contacts__img {
+  display: block;
+  margin-bottom: auto;
+  width: 120px;
+  height: 120px;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &--phone {
+    background-image: url("../img/call-us-icon.png");
+    background-size: 119px 119px;
+  }
+
+  &--mail {
+    background-image: url("../img/write-us-icon.png");
+    background-size: 119px 83px;
+  }
+
+  &--maps {
+    background-image: url("../img/arrive-icon.png");
+    background-size: 90px 120px;
+  }
+}
+
+.contacts__small {
+  display: block;
+  margin-bottom: 1px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #9ea3c4;
+  text-decoration: underline;
+}
+
+.contacts__item:hover .contacts__link {
+  color: @pink;
+  background: linear-gradient(to bottom, transparent 0%, transparent 93%, @pink 93%, @pink 100%, transparent 100%);
+}

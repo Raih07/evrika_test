@@ -1,0 +1,92 @@
+.price {
+  margin-bottom: 79px;
+}
+
+.price__table-block {
+  width: 100%;
+  margin-bottom: 79px;
+}
+
+.price__list {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #e6f0f8;
+}
+
+.price__header-item {
+  box-sizing: border-box;
+  padding: 18px 22px 23px;
+  font-family: "SegoeUIBold", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: @white;
+  background-color: @violet;
+
+  &--material {
+    width: 46%; //31.89
+    text-align: left;
+  }
+
+  &--dpi1 {
+    width: 13.5%; //20.54
+  }
+
+  &--dpi2 {
+    width: 13.5%; //13.51
+  }
+
+  &--dpi3 {
+    width: 13.5%; //20.54
+  }
+
+  &--dpi4 {
+    width: 13.5%; //20.54
+    text-align: right;
+  }
+}
+
+.price__row:nth-child(even) {
+  background-color: #f5f9fc;
+}
+
+.price__cell {
+  box-sizing: border-box;
+  padding: 8px 22px 12px;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: @middle-black;
+
+  &:first-child {
+    text-align: left;
+  }
+
+  &:hover:not(:first-child) {
+    color: @white;
+    background-color: @pink;
+    transition: all 0.2s ease;
+  }
+}
+
+.price__note {
+  padding: 20px 24px 20px;
+  border-bottom: 1px solid #e6f0f8;
+}
+
+.price__note-tittle {
+  margin: 0;
+  margin-bottom: 10px;
+  font-family: "SegoeUIBold", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.4px;
+  color: @violet;
+}
+
+.price__note-text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 24px;
+  color: @middle-black;
+}

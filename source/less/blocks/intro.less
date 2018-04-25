@@ -1,0 +1,145 @@
+.intro {
+  position: relative;
+  padding-top: 83px;
+  padding-bottom: 82px;
+  color: @white;
+  background-color: #69637e;
+  background-image: url("../img/intro-bag.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+
+.intro-wrapper {
+  .set-container();
+}
+
+.intro__tittle {
+  position: relative;
+  margin: 0;
+  margin-bottom: 60px;
+  padding-bottom: 51px;
+  width: 925px;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 108px;
+  line-height: 100px;
+  color: @white;
+  text-transform: uppercase;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 85px;
+    height: 3px;
+    background-color: @pink;
+  }
+}
+
+.intro__bottom {
+  display: flex;
+  align-items: flex-start;
+}
+
+.intro__nav {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  .list-reset();
+  padding-top: 6px;
+  width: 185px;
+  margin-right: 22px;
+}
+
+
+.intro__nav-item {
+  padding: 15px 20px 12px;
+  font-family: "SegoeUIBold", "Arial", sans-serif;
+  font-weight: 700;
+  color: @white;
+  text-align: center;
+  background-color: @violet;
+  border-bottom: 1px solid #423a8b;
+  cursor: pointer;
+  transition: all 0.05s ease;
+
+  &--active,
+  &:hover {
+    background-color: @pink;
+    border-bottom: 1px solid @pink;
+  }
+}
+
+.intro__descriptions {
+  display: flex;
+  widows: 1030px;
+  margin-left: 210px;
+}
+
+.intro__text {
+  margin: 0;
+  margin-right: 108px;
+  width: 295px;
+  font-family: "SegoeUIBold", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 35px;
+  letter-spacing: 1px;
+}
+
+.intro__list-works {
+  .list-reset();
+  width: 312px;
+  margin-right: 23px;
+}
+
+.intro__item-works {
+  position: relative;
+  margin-bottom: 8px;
+  padding-left: 40px;
+  font-size: 24px;
+  line-height: 40px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 18px;
+    width: 16px;
+    height: 13px;
+    background-image: url("../img/list-icon.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 16px 13px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.intro__order {
+  width: 295px;
+  margin-left: auto;
+  padding-top: 4px;
+}
+
+.intro__order-tel {
+  margin: 0;
+  margin-bottom: 27px;
+  font-family: "SegoeUIBold", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 30px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+
+.intro__order-link {
+  width: 100%;
+  padding-top: 14px;
+  padding-bottom: 13px;
+  letter-spacing: 1.8px;
+}
