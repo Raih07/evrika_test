@@ -6,6 +6,10 @@
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:700&amp;subset=cyrillic" rel="stylesheet">
     <link rel="preload" href="css/style.min.css" as="style">
     <link rel="stylesheet" href="css/style.min.css">
+    <script>
+      document.createElement( "picture" );
+    </script>
+    <script src="js/picturefill.min.js" async></script>
   </head>
   <body>
     <header class="main-header">
@@ -200,7 +204,7 @@
                 <a class="populars__item-body" href="#">
                   <picture>
                     <source type="image/webp" srcset="img/stretch.webp">
-                    <img class="populars__item-img" src="img/stretch.png" alt="Растяжки">
+                    <img class="populars__item-img" src="img/stretch.jpg" alt="Растяжки">
                   </picture>
                 </a>
               </li>
@@ -209,7 +213,7 @@
                 <a class="populars__item-body" href="#">
                   <picture>
                     <source type="image/webp" srcset="img/posters.webp">
-                    <img class="populars__item-img" src="img/posters.png" alt="Плакаты">
+                    <img class="populars__item-img" src="img/posters.jpg" alt="Плакаты">
                   </picture>
                 </a>
               </li>
@@ -218,7 +222,7 @@
                 <a class="populars__item-body" href="#">
                   <picture>
                     <source type="image/webp" srcset="img/press.webp">
-                    <img class="populars__item-img" src="img/press.png" alt="Пресс-волы">
+                    <img class="populars__item-img" src="img/press.jpg" alt="Пресс-волы">
                   </picture>
                 </a>
               </li>
@@ -227,7 +231,7 @@
                 <a class="populars__item-body" href="#">
                   <picture>
                     <source type="image/webp" srcset="img/shtender.webp">
-                    <img class="populars__item-img" src="img/shtender.png" alt="Штендеры">
+                    <img class="populars__item-img" src="img/shtender.jpg" alt="Штендеры">
                   </picture>
                 </a>
               </li>
@@ -236,7 +240,7 @@
                 <a class="populars__item-body" href="#">
                   <picture>
                     <source type="image/webp" srcset="img/rollup.webp">
-                    <img class="populars__item-img" src="img/rollup.png" alt="Ролл-апы">
+                    <img class="populars__item-img" src="img/rollup.jpg" alt="Ролл-апы">
                   </picture>
                 </a>
               </li>
@@ -245,7 +249,7 @@
                 <a class="populars__item-body" href="#">
                   <picture>
                     <source type="image/webp" srcset="img/liteboxs.webp">
-                    <img class="populars__item-img" src="img/liteboxs.png" alt="Лайтбоксы">
+                    <img class="populars__item-img" src="img/liteboxs.jpg" alt="Лайтбоксы">
                   </picture>
                 </a>
               </li>
@@ -254,7 +258,7 @@
                 <a class="populars__item-body" href="#">
                   <picture>
                     <source type="image/webp" srcset="img/stends.webp">
-                    <img class="populars__item-img" src="img/stends.png" alt="Стенды">
+                    <img class="populars__item-img" src="img/stends.jpg" alt="Стенды">
                   </picture>
                 </a>
               </li>
@@ -418,7 +422,7 @@
           <div class="main-content__inner">
             <div class="order__box">
               <h2 class="order__tittle">Оформить заказ</h2>
-              <form class="order__form" action="https://echo.htmlacademy.ru" method="post">
+              <form class="order__form" action="" method="post">
                 <div class="order__container-input">
                   <div class="order__group">
                     <input class="order__input" type="text" name="first_name" id="first_name" placeholder="Ваше имя">
@@ -715,9 +719,6 @@
           <h3 class="main-footer__col-tittle main-footer__col-tittle--nomarg">Мы на карте</h3>
         </div>
       </section>
-
-
-
 
       <section class="main-footer__map">
         <h2 class="visually-hidden">Наши координаты</h2>

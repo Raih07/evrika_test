@@ -1,3 +1,5 @@
+/*******Открытие/закрытие ответов на вопросы*********/
+
 var question_btn = document.getElementsByClassName('questions__hidden-btn')[0];
 if (question_btn) {
   var questions_list = document.getElementsByClassName('questions__list')[0];
@@ -8,6 +10,21 @@ if (question_btn) {
   });
 }
 
+var services_nav = document.getElementsByClassName('services-nav')[0];
+
+if (services_nav) {
+  services_nav.addEventListener('mouseover', function(event) {
+    if (event.target.classList.contains('services-nav__link')) {
+      event.target.classList.add('services-nav__link--open');
+    }
+  });
+
+  services_nav.addEventListener('mouseout', function(event) {
+    if (event.target.classList.contains('services-nav__link')) {
+      event.target.classList.remove('services-nav__link--open');
+    }
+  });
+}
 
 /*******Карта в подвале*********/
 

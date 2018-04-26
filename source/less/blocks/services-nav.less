@@ -28,10 +28,6 @@
     width: 49%;
   }
 
-  &--open .services-nav__link::after {
-    background-image: url("../img/menu-open-icon.png");
-  }
-
   &:hover .menu {
     display: block;
   }
@@ -71,6 +67,10 @@
     background-size: 10px 6px;
     pointer-events: none;
     z-index: 1;
+  }
+
+  &--open::after {
+    background-image: url("../img/menu-open-icon.png");
   }
 
   &:hover,
