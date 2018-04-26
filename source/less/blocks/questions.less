@@ -59,11 +59,23 @@
     background-position: center;
     background-size: 10px 6px;
   }
+
+  &--open::after {
+
+  }
+
+  &--close::after {
+    background-image: url("../img/open-icon.png");
+  }
 }
 
 .questions__list {
   .list-reset();
   counter-reset: count;
+
+  &--close {
+    display: none;
+  }
 }
 
 .questions__item {

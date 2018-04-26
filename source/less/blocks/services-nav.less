@@ -1,9 +1,9 @@
 .services-nav {
+  position: relative;
   background-color: @violet;
 }
 
 .services-nav__list {
-  position: relative;
   .list-reset();
   .set-container();
   display: flex;
@@ -12,48 +12,50 @@
 }
 
 .services-nav__item {
-  position: relative;
+  //position: relative;
   text-align: center;
 
   &:first-child {
-    width: 34%; //30
+    width: 34%;
+    text-align: left;
   }
 
   &:nth-child(2) {
-    width: 17%; //24
+    width: 17%;
   }
 
   &:last-child {
-    width: 49%; //46
+    width: 49%;
   }
 
-  &:first-child,
-  &:last-child {
-    position: relative;
-    z-index: 1;
+  &--open .services-nav__link::after {
+    background-image: url("../img/menu-open-icon.png");
   }
 
-  &:first-child:hover::before {
-    content: "";
-    //display: block;
-    bottom: 0;
-    height: 100%;
-    right: 0;
-    width: 100vw;
-    background-color: @pink;
-    z-index: -1;
+  &:hover .menu {
+    display: block;
   }
+}
 
-  &:last-child:hover::before {
-    content: "";
-    //display: block;
-    bottom: 0;
-    height: 100%;
-    left: 0;
-    width: 100vw;
-    background-color: @pink;
-    z-index: -1;
-  }
+.services-nav__link {
+  position: relative;
+  display: block;
+  padding-top: 26px;
+  padding-bottom: 25px;
+  //padding-left: 2px;
+  //padding-right: 46px;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: @white;
+  background-color: @violet;
+  transition: background 0.1s ease;
+  z-index: 1;
+  outline: none;
 
   &::after {
     content: "";
@@ -71,32 +73,34 @@
     z-index: 1;
   }
 
-  &--open::after {
-    background-image: url("../img/menu-open-icon.png");
+  &:hover,
+  &:focus {
+    background-color: @pink;
   }
 
-  outline: 1px solid red;
-}
-
-.services-nav__link {
-  display: block;
-  padding-top: 26px;
-  padding-bottom: 25px;
-  //padding-left: 2px;
-  //padding-right: 46px;
-  font-family: "FuturaFuturisC", "Arial", sans-serif;
-  font-family: "PT Sans", "Arial", sans-serif;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 24px;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: @white;
-  background-color: @violet;
-  transition: all 0.2s ease;
-
-  &:hover {
+  &--first:hover::before,
+  &--first:focus::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    right: 0;
+    width: 100vw;
+    z-index: -1;
     background-color: @pink;
+    transition: background 0.1s ease;
+  }
+
+  &--last:hover::before,
+  &--last:focus::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    width: 100vw;
+    z-index: -1;
+    background-color: @pink;
+    transition: background 0.1s ease;
   }
 }

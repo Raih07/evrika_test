@@ -1,4 +1,8 @@
 .menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
   box-sizing: border-box;
   padding-top: 55px;
   padding-bottom: 55px;
@@ -6,6 +10,7 @@
   width: 100vw;
   background-color: @light-blue;
   box-shadow: 0 7px 54px rgba(0, 1, 1, 0.5);
+  z-index: 3;
 }
 
 .menu__wrapper {
@@ -59,7 +64,7 @@
   line-height: 24px;
   text-decoration: none;
   color: @violet-link;
-  transition: all 0.05s ease;
+  transition: all 0.1s ease;
   outline: none;
 
   &:hover,

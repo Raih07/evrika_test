@@ -1,3 +1,14 @@
+var question_btn = document.getElementsByClassName('questions__hidden-btn')[0];
+if (question_btn) {
+  var questions_list = document.getElementsByClassName('questions__list')[0];
+
+  question_btn.addEventListener('click', function() {
+    questions_list.classList.toggle('questions__list--close');
+    question_btn.classList.toggle('questions__hidden-btn--close');
+  });
+}
+
+
 /*******Карта в подвале*********/
 
 if(document.getElementById('YMapsID')) {
